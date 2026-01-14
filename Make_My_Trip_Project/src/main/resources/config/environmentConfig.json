@@ -1,0 +1,48 @@
+{
+	"defaultEnv" : "QA",
+	
+	"environment" : 
+	{
+		"QA" : 
+		{
+			"browserName" : "chrome",
+			"baseUrl": "https://www.makemytrip.com/",
+			"userName" : "TestUser123",
+			"password" : "Test@123"
+		},
+		
+		"Stage" : 
+		{
+			"browserName" : "firefox",
+			"baseUrl": "https://www.makemytrip.com/",
+			"userName" : "TestUser123",
+			"password" : "Test@123"
+		},
+		
+		"Prod" : 
+		{
+			"browserName" : "edge",
+			"baseUrl": "https://www.makemytrip.com/",
+			"userName" : "TestUser123",
+			"password" : "Test@123"
+		}
+	}
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

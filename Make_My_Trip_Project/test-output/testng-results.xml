@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-14T14:45:37 IST" name="Default suite" finished-at="2026-01-14T14:46:21 IST" duration-ms="44177">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@53f3bdbd]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-01-14T14:45:37 IST" name="Default test" finished-at="2026-01-14T14:46:21 IST" duration-ms="44177">
+      <class name="runners.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@53f3bdbd]" started-at="2026-01-14T14:45:37 IST" name="setUpClass" finished-at="2026-01-14T14:45:38 IST" duration-ms="361" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2b916808]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@53f3bdbd]" started-at="2026-01-14T14:45:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T14:46:21 IST" duration-ms="43663" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can book train ticket."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Train seat booking."]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Train details do not match: Arrays differ at element [1]: 8:30 PM,29 JAN != 8:30 PM, 29 JAN expected [8:30 PM,29 JAN] but found [8:30 PM, 29 JAN]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Train details do not match: Arrays differ at element [1]: 8:30 PM,29 JAN != 8:30 PM, 29 JAN expected [8:30 PM,29 JAN] but found [8:30 PM, 29 JAN]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:1801)
+at Pom.TravellerPage.verifyReviewPage(TravellerPage.java:94)
+at stepDef.TrainsStepDef.clickOnAddTravellersBtn(TrainsStepDef.java:103)
+at ✽.User click on add travellers button(file:///C:/Users/himan/eclipse-workspace/Make_My_Trip_Project/src/test/resources/features/Trains.feature:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@53f3bdbd]" started-at="2026-01-14T14:46:21 IST" name="tearDownClass" finished-at="2026-01-14T14:46:21 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runners.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
