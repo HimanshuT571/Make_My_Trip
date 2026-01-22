@@ -102,6 +102,7 @@ public class Trains_Page {
 		this.wait.until(ExpectedConditions.elementToBeClickable(this.enterBoardingCityName));
 		Thread.sleep(3000);
 		this.enterBoardingCityName.sendKeys(boardingCityName);
+		System.out.println(boardingCityName);
 	}
 	
 	//Select the boarding city from suggestions
