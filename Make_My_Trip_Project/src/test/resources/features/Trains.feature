@@ -1,4 +1,4 @@
-
+@TC1234 @Regression
 Feature: Train seat booking.
 
 Scenario: Verify user can book train ticket.

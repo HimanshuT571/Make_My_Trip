@@ -1,14 +1,13 @@
 package core;
-
-import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.io.FileHandler;
+import java.io.ByteArrayInputStream;
+
+import io.qameta.allure.Allure;
 
 public class ScreenshotUtility {
 	
@@ -19,14 +18,18 @@ public class ScreenshotUtility {
 		String formatedDate = currentDate.format(DateTimeFormatter.ofPattern
 				("dd MM yyyy HH_mm_ss"));
 		TakesScreenshot screenshot = (TakesScreenshot)driver;
-		
-		File src = screenshot.getScreenshotAs(OutputType.FILE);
-		scenarioName = scenarioName.replaceAll("[^a-zA-Z0-9_-]", "_");
-		String screenshotName = formatedDate + " "+scenarioName;
-		
-		File dest = new File("test-output/screenshots/"+screenshotName+".png");
-		
-		FileHandler.copy(src, dest);
+		try 
+		{
+			byte[] screenshotTaken = screenshot.getScreenshotAs(OutputType.BYTES);
+			scenarioName = scenarioName.replaceAll("[^a-zA-Z0-9_-]", "_");
+			String screenshotName = formatedDate + " "+scenarioName;
+	        Allure.addAttachment(scenarioName + " - Screenshot", "image/png",
+	                new ByteArrayInputStream(screenshotTaken), ".png");
+	        System.out.println("Screenshot attached to Allure for scenario: " + scenarioName);
+		}
+		catch(Exception e)
+		{
+			System.err.println("Screenshot failed: " + e.getMessage());
+		}
 	}
-
 }

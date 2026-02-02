@@ -29,6 +29,7 @@ public class CoreHooks extends DriverFactory{
 		{
 			if(scenario.isFailed())
 			{
+				System.out.println("Scenario failed: " + scenario.getName());
 				ScreenshotUtility.captureScreenshot(DriverFactory.driver, scenario.getName());
 			}
 		}
@@ -37,7 +38,8 @@ public class CoreHooks extends DriverFactory{
 			e.printStackTrace();
 		}
 		
-		DriverFactory.tearDown(); 
+		DriverFactory.tearDown();
+		System.out.println("Browser closed for scenario: " + scenario.getName());
 	}
 
 }

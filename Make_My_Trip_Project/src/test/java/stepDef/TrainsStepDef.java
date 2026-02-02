@@ -36,7 +36,6 @@ public class TrainsStepDef extends DriverFactory {
 	@Given("User click on Book Train Tickets")
 	public void clickBookTrainTicketsBtn()
 	{
-		
 		trainsPage.bookTrainTicketsSelected();
 	}
 

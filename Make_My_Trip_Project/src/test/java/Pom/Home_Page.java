@@ -23,7 +23,7 @@ public class Home_Page {
 	@FindBy (xpath = "//span[text()='Trains']")
 	private WebElement trainsBtn;
 	
-	@FindBy (xpath = "//a[@href='/railways/']")
+	@FindBy (xpath = "//a[@href='https://www.makemytrip.com/railways/']//span/span")
 	private WebElement verifyTrainsBtn;
 	
 	
