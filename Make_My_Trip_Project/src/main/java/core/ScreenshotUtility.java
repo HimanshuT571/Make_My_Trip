@@ -24,7 +24,7 @@ public class ScreenshotUtility {
 			byte[] screenshotTaken = screenshot.getScreenshotAs(OutputType.BYTES);
 			scenarioName = scenarioName.replaceAll("[^a-zA-Z0-9_-]", "_");
 			String screenshotName = formatedDate + " "+scenarioName;
-	        Allure.addAttachment(scenarioName + " - Screenshot", "image/png",
+	        Allure.addAttachment(screenshotName, "image/png",
 	                new ByteArrayInputStream(screenshotTaken), ".png");
 	        System.out.println("Screenshot attached to Allure for scenario: " + scenarioName);
 		}
