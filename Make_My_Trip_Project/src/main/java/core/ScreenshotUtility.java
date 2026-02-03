@@ -13,13 +13,14 @@ public class ScreenshotUtility {
 	
 	public static void captureScreenshot(WebDriver driver, String scenarioName) throws IOException
 	{
-		LocalDateTime currentDate =  LocalDateTime.now();
 		
-		String formatedDate = currentDate.format(DateTimeFormatter.ofPattern
-				("dd MM yyyy HH_mm_ss"));
-		TakesScreenshot screenshot = (TakesScreenshot)driver;
 		try 
 		{
+			LocalDateTime currentDate =  LocalDateTime.now();
+			
+			String formatedDate = currentDate.format(DateTimeFormatter.ofPattern
+					("dd MM yyyy HH_mm_ss"));
+			TakesScreenshot screenshot = (TakesScreenshot)driver;
 			byte[] screenshotTaken = screenshot.getScreenshotAs(OutputType.BYTES);
 			scenarioName = scenarioName.replaceAll("[^a-zA-Z0-9_-]", "_");
 			String screenshotName = formatedDate + " "+scenarioName;
